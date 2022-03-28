@@ -1,0 +1,45 @@
+Jenkins Installation
+
+https://www.jenkins.io/download/
+https://www.jenkins.io/doc/book/installing/
+
+Launch EC-2 Instance with custom tcp -8080 port open SG, http-80, ssh-22
+
+
+
+
+
+1. Jenkin As a Service Installation
+
+yum update -y
+sudo yum install java-1.8.0-openjdk-devel -y
+amazon-linux-extras install epel
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+yum install jenkins -y
+systemctl start jenkins or service jenkins start
+systemctl status jenkins
+Go to Ip address and use IP:8080
+
+
+2.Jenkin as an Application in tomcat
+
+     yum update -y
+     yum install java-1.8.0-openjdk-devel.x86_64 -y
+     mkdir mnt
+    cd mnt/
+    wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.zip
+   unzip apache-tomcat-9.0.56.zip
+    ls -lrt
+    rm -f apache-tomcat-9.0.56.zip
+    chmod -R 777 apache-tomcat-9.0.56
+    ls -lrt
+    cd apache-tomcat-9.0.56/webapps/
+     ls -lrt
+   wget https://get.jenkins.io/war-stable/2.319.1/jenkins.war
+   cd ..
+    cd bin/
+    sh startup.sh
+
+Open URL- ip:8080/jenkins
