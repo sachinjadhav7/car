@@ -1,0 +1,13 @@
+Cmake
+
+cd cmake
+wget https://github.com/Kitware/CMake/releases/download/v3.22.3/cmake-3.22.3-linux-x86_64.tar.gz
+
+tar xvf https://github.com/Kitware/CMake/releases/download/v3.22.3/cmake-3.22.3-linux-x86_64.tar.gz
+
+ PATH=/usr/bin:$PATH;export PATH
+  yum install gcc
+  yum install build-essential
+  yum install gcc-c++
+  sudo yum install openssl-devel
+  

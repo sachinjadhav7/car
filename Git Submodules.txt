@@ -1,0 +1,17 @@
+mkdir surface
+cd surface
+git init
+touch destroyer.html
+git add .
+git commit -m "Add surfae fleet"
+mkdir submarines
+cd submarines
+git init
+touch nuclear.html
+git add .
+git commit -m "Add submarine to fleet"
+cd ..
+git submodule add ./submarines
+git init
+git add .
+git commit -m "Add the submodule submarines"

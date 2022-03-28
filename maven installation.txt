@@ -1,0 +1,23 @@
+MAVEN Installation
+
+1.cd /mnt/
+
+2.wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.zip
+3.unzip apache-maven-3.8.4-bin.zip
+4.cd /usr/local
+5.mkdir maven
+6.sudo mv apache-maven-3.8.4 /usr/local/maven/   (go to mavens directory eg /mnt)
+7.cd ~
+8.vi .bash
+
+export MAVEN_HOME=/usr/local/maven/apache-maven-3.8.4
+export M2_HOME=/usr/local/maven/apache-maven-3.8.4
+export M2=/usr/local/maven/apache-maven-3.8.4/bin
+export PATH=/usr/local/maven/apache-maven-3.8.4/bin:$PATH
+
+Paste above lines in .bash file
+9.source .bash
+
+10.mvn -version
+
+Maven in installed on your EC2
